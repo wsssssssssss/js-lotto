@@ -36,3 +36,7 @@
 
 ### 3. 파일 변경
 복권의 마킹을 지우면 해당 이미지 파일에도 지워진 마킹이 반영되어 금액이 표시된다.
+
+https://user-images.githubusercontent.com/32596517/148633893-db5ab22b-27af-4774-ad08-6ee20ed1092a.mp4
+
+
