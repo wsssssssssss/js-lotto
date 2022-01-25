@@ -46,7 +46,11 @@ const imgHover = (ex, ey) => {
     ctx.fillRect(ex + 100, ey, 200, 150);
 };
 
-canvas.addEventListener('mousemove', (e) => {
+const imgClick = (ex, ey) => {
+    ctx.fillText('Hello world',ex + 100, ey, );
+}
+
+const listener = (e, evt ) => {
     const setX = e.offsetX;
     const setY = e.offsetY;
     let xNum = 0;
@@ -56,8 +60,18 @@ canvas.addEventListener('mousemove', (e) => {
     if (setX < 500) xNum = 1;
     if (setY < 300) yNum = 1;
     else            yNum = 2;
-    imgHover(xNum, yNum);
-});
+    switch (evt) {
+        case 'move':
+            imgHover(xNum, yNum);    
+            break;
+        case 'click':
+            imgClick(xNum, yNum);
+            break;
+    };
+};
+canvas.addEventListener('mousemove', (e) => listener(e, 'move'));
+canvas.addEventListener('click', (e) => listener(e, 'click'));
+canvas.addEventListener('mouseleave', imgClear);
 
 openFileButton.addEventListener("click", async e => {
     const [fileHandle] = await showOpenFilePicker();   
@@ -65,4 +79,6 @@ openFileButton.addEventListener("click", async e => {
     canvas.width = 900;
     canvas.height = 450;
     imgDraw(file, 0,0, 900, 450);
+
+    
 });
