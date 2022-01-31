@@ -1,0 +1,4 @@
+a{text-decoration: none;}
+.container{width: 1500px; margin: 0 auto; }
+.container__btns{display: flex; gap: 1rem;}
+.btn{width: 100px; height: 30px; border: none; background: blue; border-radius: 5px; color: #fff; display: flex; justify-content: center; align-items: center;}

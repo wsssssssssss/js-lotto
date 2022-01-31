@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="lotto"
-    />
-    <link rel="stylesheet" href="./css/style.css">
-    <title>lotto</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="lotto" />
+  <link rel="stylesheet" href="./css/style.css">
+  <title>lotto</title>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root">
+    <div class="container">
+      <div class="container__btns">
+        <button id="openFile" class="btn">openFile</button>
+        <a href="./paper.png" download="paper.png" class="btn">다운</a>
+        <canvas id="canvas"></canvas>
+      </div>
     </div>
-    <script src="./app/index.js"></script>
-  </body>
+  </div>
+  <script src="./app/index.js"></script>
+</body>
+
 </html>
